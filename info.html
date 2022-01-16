@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Prueba Tecnica</title>
+    <style type="text/css" media="screen">
+  * {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  body, html {
+    padding: 3px 3px 3px 3px;
+
+    background-color: #D8DBE2;
+
+    font-family: Verdana, sans-serif;
+    font-size: 11pt;
+    text-align: center;
+  }
+
+  div.main_page {
+    position: relative;
+    display: table;
+
+    width: 800px;
+
+    margin-bottom: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 0px 0px 0px;
+
+    border-width: 2px;
+    border-color: #212738;
+    border-style: solid;
+
+    background-color: #FFFFFF;
+
+    text-align: center;
+  }
+
+  div.page_header {
+    height: 99px;
+    width: 100%;
+
+    background-color: #F5F6F7;
+  }
+
+  div.page_header span {
+    margin: 15px 0px 0px 50px;
+
+    font-size: 180%;
+    font-weight: bold;
+  }
+
+  div.page_header img {
+    margin: 3px 0px 0px 40px;
+
+    border: 0px 0px 0px;
+  }
+
+  div.table_of_contents {
+    clear: left;
+
+    min-width: 200px;
+
+    margin: 3px 3px 3px 3px;
+
+    background-color: #FFFFFF;
+
+    text-align: left;
+  }
+
+  div.table_of_contents_item {
+    clear: left;
+
+    width: 100%;
+
+    margin: 4px 0px 0px 0px;
+
+    background-color: #FFFFFF;
+
+    color: #000000;
+    text-align: left;
+  }
+
+  div.table_of_contents_item a {
+    margin: 6px 0px 0px 6px;
+  }
+
+  div.content_section {
+    margin: 3px 3px 3px 3px;
+
+    background-color: #FFFFFF;
+
+    text-align: left;
+  }
+
+  div.content_section_text {
+    padding: 4px 8px 4px 8px;
+
+    color: #000000;
+    font-size: 100%;
+  }
+
+  div.content_section_text pre {
+    margin: 8px 0px 8px 0px;
+    padding: 8px 8px 8px 8px;
+
+    border-width: 1px;
+    border-style: dotted;
+    border-color: #000000;
+
+    background-color: #F5F6F7;
+
+    font-style: italic;
+  }
+
+  div.content_section_text p {
+    margin-bottom: 6px;
+  }
+
+  div.content_section_text ul, div.content_section_text li {
+    padding: 4px 8px 4px 16px;
+  }
+
+  div.section_header {
+    padding: 3px 6px 3px 6px;
+
+    background-color: #8E9CB2;
+
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 112%;
+    text-align: center;
+  }
+
+  div.section_header_red {
+    background-color: #CD214F;
+  }
+
+  div.section_header_grey {
+    background-color: #9F9386;
+  }
+
+  .floating_element {
+    position: relative;
+    float: left;
+  }
+
+  div.table_of_contents_item a,
+  div.content_section_text a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  div.table_of_contents_item a:link,
+  div.table_of_contents_item a:visited,
+  div.table_of_contents_item a:active {
+    color: #000000;
+  }
+
+  div.table_of_contents_item a:hover {
+    background-color: #000000;
+
+    color: #FFFFFF;
+  }
+
+  div.content_section_text a:link,
+  div.content_section_text a:visited,
+   div.content_section_text a:active {
+    background-color: #DCDFE6;
+
+    color: #000000;
+  }
+
+  div.content_section_text a:hover {
+    background-color: #000000;
+
+    color: #DCDFE6;
+  }
+
+  div.validator {
+  }
+    </style>
+  </head>
+  <body>
+    <div class="main_page">
+      <div class="page_header floating_element">
+        <span class="floating_element">
+          Prueba Tecnica Ing. Infraestructura Cloud
+        </span>
+      </div>
+      <div class="content_section floating_element">
+
+
+        <div class="section_header section_header_red">
+          <div id="about"></div>
+          Hola Amigos!
+        </div>
+        <div class="content_section_text">
+          <p>
+                Este servidor web, es una maquina virtual con sistema operativo Ubuntu y esta aprovisionada en el hypervisor "Hyper-V" de microsoft.
+
+          </p>
+
+        </div>
+        <div class="section_header">
+          <div id="changes"></div>
+                Para la adecuacion e instalacion de apache, se ejecutaron estos comandos;
+        </div>
+        <div class="content_section_text">
+          <p>
+		Para generar las llaves SSH y permitir conexion sin clave: 
+          </p>
+
+          <pre>
+
+		ssh-keygen -t rsa -b 4096
+		cat id_rsa
+		cat id_rsa.pub
+		vi authorized_keys
+		chmod -R go= /home/apache/.ssh
+		ls -la
+		chmod 700 /home/apache/.ssh/
+		ls -la
+		chmod 644 /home/apache/.ssh/authorized_key
+		ls -la
+		sudo reboot now
+
+	  </pre>
+	  <p>
+
+		Para configurar un IP fija en la tarjeta de red:
+
+	  </p>
+          <pre>
+
+		cd /etc/cloud/cloud.cfg.d
+		vi subiquity-disable-cloudinit-networking.cfg
+		cd /etc/netplan/
+		vi 00-installer-config.yaml
+		sudo vi 00-installer-config.yaml
+		sudo netplan apply
+		sudo netplan try
+		ip a
+
+	  </pre>
+	  <p>
+
+		Instalar Apache y cambiar el puerto:
+
+	  </p>
+	  <pre>
+
+		sudo apt update
+		sudo apt install apache2
+		apache2 -version
+		vi ports.conf
+		sudo service apache2 restart
+		service apache2 status
+
+	  </pre>
+	  <p>
+
+		Activar Firewall y permitir puertos SSH y Apache 8088:
+
+	  </p>
+	  <pre>
+
+		sudo ufw app list
+		sudo ufw status
+		sudo ufw allow 'Apache'
+		vi /etc/default/ufw
+		sudo vi /etc/default/ufw
+		sudo ufw allow ssh
+		sudo ufw enable
+		sudo ufw allow 8088
+		sudo ufw status
+
+          </pre>
+
+        <div class="section_header">
+            <div id="docroot"></div>
+                Datos de la maquina en la que esta instalado el servidor web y comandos para averiguarlos
+        </div>
+
+          <ul>
+              		<li>
+			   <tt>Sistema Operativo tiene la maquina:</tt> "lsb_release -a".          
+			</li>
+              		<li>
+                           <tt>Espacio en Disco:</tt> "df -h", "sudo du -hcs *".
+                        </li>
+
+                        <li>
+                           <tt>Cantidad de memoria RAM:</tt> "sudo dmidecode --type memory | less".
+                        </li>
+
+                        <li>
+                           <tt>Version del kernel de Linux:</tt> "uname -r".
+                        </li>
+
+                        <li>
+                           <tt>Caracteristicas de CPU:</tt>"lscpu".
+                        </li>
+
+                        <li>
+                           <tt>IP Privada:</tt>"ip a".
+                        </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="validator">
+    </div>
+  </body>
+</html>
+
+
+
+
