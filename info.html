@@ -287,26 +287,53 @@
 
           <ul>
               		<li>
-			   <tt>Sistema Operativo tiene la maquina:</tt> "lsb_release -a".          
+			   <tt>Sistema Operativo tiene la maquina:</tt> "lsb_release -a"; Ubuntu Server 20.04.3 LTS
+.          
 			</li>
               		<li>
-                           <tt>Espacio en Disco:</tt> "df -h", "sudo du -hcs *".
+                           <tt>Espacio en Disco:</tt> "df -h", "sudo du -hcs *"; Total 30Gb, 20Gb en particion / (%25usado), 10Gb para demas particiones 
                         </li>
 
                         <li>
-                           <tt>Cantidad de memoria RAM:</tt> "sudo dmidecode --type memory | less".
+                           <tt>Cantidad de memoria RAM:</tt> "sudo dmidecode --type memory | less"; 2Gb.
                         </li>
 
                         <li>
-                           <tt>Version del kernel de Linux:</tt> "uname -r".
+                           <tt>Version del kernel de Linux:</tt> "uname -r";5.4.0-94-generic.
                         </li>
 
                         <li>
-                           <tt>Caracteristicas de CPU:</tt>"lscpu".
+                           <tt>Caracteristicas de CPU:</tt>"lscpu";
+
+				Architecture:                    x86_64
+				CPU op-mode(s):                  32-bit, 64-bit
+				Byte Order:                      Little Endian
+				Address sizes:                   48 bits physical, 48 bits virtual
+				CPU(s):                          2
+				On-line CPU(s) list:             0,1
+				Thread(s) per core:              2
+				Core(s) per socket:              1
+				Socket(s):                       1
+				NUMA node(s):                    1
+				Vendor ID:                       AuthenticAMD
+				CPU family:                      23
+				Model:                           17
+				Model name:                      AMD Ryzen 5 2400G with Radeon Vega Graphics
+				Stepping:                        0
+				CPU MHz:                         3593.136
+				BogoMIPS:                        7186.27
+				Hypervisor vendor:               Microsoft
+				Virtualization type:             full
+				L1d cache:                       32 KiB
+				L1i cache:                       64 KiB
+				L2 cache:                        512 KiB
+				L3 cache:                        4 MiB
+				NUMA node0 CPU(s):               0,1
+.
                         </li>
 
                         <li>
-                           <tt>IP Privada:</tt>"ip a".
+                           <tt>IP Privada:</tt>"ip a"; 172.31.180.2.
                         </li>
           </ul>
         </div>
